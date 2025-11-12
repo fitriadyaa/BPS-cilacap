@@ -18,7 +18,8 @@ RepositoryInflasi repositoryinflasi = RepositoryInflasi();
 class _pendidikanContentState extends State<pendidikanContent> {
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height -
+    final screenHeight =
+        MediaQuery.of(context).size.height -
         MediaQuery.of(context).padding.top -
         MediaQuery.of(context).padding.bottom;
     final screenWidth = MediaQuery.of(context).size.width;
@@ -26,28 +27,25 @@ class _pendidikanContentState extends State<pendidikanContent> {
       appBar: AppBar(
         title: const Text(
           'PENDIDIKAN',
-          style: TextStyle(fontSize: 16),
+          style: TextStyle(fontSize: 16, color: Colors.white),
         ),
         backgroundColor: Colors.black,
+        iconTheme: const IconThemeData(color: Colors.white),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: const Center(
-            child: Icon(
-              BackIcons.circle_arrow,
-              size: 40,
-            ),
-          ),
+          icon: const Center(child: Icon(BackIcons.circle_arrow, size: 40)),
         ),
         actions: [
           IconButton(
-              onPressed: () {
-                showModalBottomSheet(
-                  backgroundColor: Colors.white,
-                  context: context,
-                  builder: (context) {
-                    return ListView(children: [
+            onPressed: () {
+              showModalBottomSheet(
+                backgroundColor: Colors.white,
+                context: context,
+                builder: (context) {
+                  return ListView(
+                    children: [
                       Column(
                         children: [
                           Container(
@@ -56,8 +54,9 @@ class _pendidikanContentState extends State<pendidikanContent> {
                             child: const Text(
                               "PENDIDIKAN",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.blue),
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue,
+                              ),
                             ),
                           ),
                           Container(
@@ -76,8 +75,9 @@ class _pendidikanContentState extends State<pendidikanContent> {
                                   child: const Text(
                                     "BEBERAPA KONSEP PADA STATISTIK PENDIDIKAN",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.blue),
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue,
+                                    ),
                                   ),
                                 ),
                                 const Text(
@@ -93,8 +93,9 @@ class _pendidikanContentState extends State<pendidikanContent> {
                             child: const Text(
                               "Konsep Penghitungan Angka Melek Huruf (AMH)",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.blue),
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue,
+                              ),
                             ),
                           ),
                           Container(
@@ -124,8 +125,9 @@ class _pendidikanContentState extends State<pendidikanContent> {
                             child: const Text(
                               "Konsep Penghitungan APM, APK dan APS",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.blue),
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue,
+                              ),
                             ),
                           ),
                           Container(
@@ -170,8 +172,9 @@ class _pendidikanContentState extends State<pendidikanContent> {
                             child: const Text(
                               "Partisipasi Sekolah",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.blue),
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue,
+                              ),
                             ),
                           ),
                           Container(
@@ -196,8 +199,9 @@ class _pendidikanContentState extends State<pendidikanContent> {
                             child: const Text(
                               "Pendidikan Tertinggi",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.blue),
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue,
+                              ),
                             ),
                           ),
                           Container(
@@ -206,10 +210,10 @@ class _pendidikanContentState extends State<pendidikanContent> {
                             child: Column(
                               children: [
                                 const Text(
-                                    "Pendidikan tertinggi yang ditamatkan: ",
-                                    textAlign: TextAlign.left,
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w500)),
+                                  "Pendidikan tertinggi yang ditamatkan: ",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(fontWeight: FontWeight.w500),
+                                ),
                               ],
                             ),
                           ),
@@ -227,14 +231,19 @@ class _pendidikanContentState extends State<pendidikanContent> {
                           ),
                           Container(
                             padding: const EdgeInsets.only(
-                                top: 5, left: 5, right: 5, bottom: 2),
+                              top: 5,
+                              left: 5,
+                              right: 5,
+                              bottom: 2,
+                            ),
                             alignment: Alignment.centerLeft,
                             child: Column(
                               children: [
-                                const Text("SD/MI: ",
-                                    textAlign: TextAlign.left,
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w500)),
+                                const Text(
+                                  "SD/MI: ",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(fontWeight: FontWeight.w500),
+                                ),
                               ],
                             ),
                           ),
@@ -252,14 +261,19 @@ class _pendidikanContentState extends State<pendidikanContent> {
                           ),
                           Container(
                             padding: const EdgeInsets.only(
-                                top: 5, left: 5, right: 5, bottom: 2),
+                              top: 5,
+                              left: 5,
+                              right: 5,
+                              bottom: 2,
+                            ),
                             alignment: Alignment.centerLeft,
                             child: Column(
                               children: [
-                                const Text("SMP/MTs: ",
-                                    textAlign: TextAlign.left,
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w500)),
+                                const Text(
+                                  "SMP/MTs: ",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(fontWeight: FontWeight.w500),
+                                ),
                               ],
                             ),
                           ),
@@ -277,14 +291,19 @@ class _pendidikanContentState extends State<pendidikanContent> {
                           ),
                           Container(
                             padding: const EdgeInsets.only(
-                                top: 5, left: 5, right: 5, bottom: 2),
+                              top: 5,
+                              left: 5,
+                              right: 5,
+                              bottom: 2,
+                            ),
                             alignment: Alignment.centerLeft,
                             child: Column(
                               children: [
-                                const Text("SM/MA: ",
-                                    textAlign: TextAlign.left,
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w500)),
+                                const Text(
+                                  "SM/MA: ",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(fontWeight: FontWeight.w500),
+                                ),
                               ],
                             ),
                           ),
@@ -302,14 +321,19 @@ class _pendidikanContentState extends State<pendidikanContent> {
                           ),
                           Container(
                             padding: const EdgeInsets.only(
-                                top: 5, left: 5, right: 5, bottom: 2),
+                              top: 5,
+                              left: 5,
+                              right: 5,
+                              bottom: 2,
+                            ),
                             alignment: Alignment.centerLeft,
                             child: Column(
                               children: [
-                                const Text("Perguruan Tinggi (PT): ",
-                                    textAlign: TextAlign.left,
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w500)),
+                                const Text(
+                                  "Perguruan Tinggi (PT): ",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(fontWeight: FontWeight.w500),
+                                ),
                               ],
                             ),
                           ),
@@ -327,11 +351,13 @@ class _pendidikanContentState extends State<pendidikanContent> {
                           ),
                         ],
                       ),
-                    ]);
-                  },
-                );
-              },
-              icon: const Icon(Icons.info_outlined))
+                    ],
+                  );
+                },
+              );
+            },
+            icon: const Icon(Icons.info_outlined),
+          ),
         ],
       ),
       body: Container(
@@ -339,128 +365,129 @@ class _pendidikanContentState extends State<pendidikanContent> {
         child: Column(
           children: [
             Flexible(
-                flex: 1,
-                fit: FlexFit.tight,
-                child: Column(
-                  children: [
-                    Flexible(
-                      flex: 3,
-                      fit: FlexFit.tight,
-                      child: Container(
-                        height: 100,
-                        color: Colors.black,
-                        child: const Center(
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 2,
-                              horizontal: 5,
-                            ),
-                            child: Text(
-                              "Beberapa Indikator Pendidikan Kabupaten Cilacap dan Kabupaten/Kota Di Jawa Tengah",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
-                              textAlign: TextAlign.center,
-                            ),
+              flex: 1,
+              fit: FlexFit.tight,
+              child: Column(
+                children: [
+                  Flexible(
+                    flex: 3,
+                    fit: FlexFit.tight,
+                    child: Container(
+                      height: 100,
+                      color: Colors.black,
+                      child: const Center(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 2,
+                            horizontal: 5,
+                          ),
+                          child: Text(
+                            "Beberapa Indikator Pendidikan Kabupaten Cilacap dan Kabupaten/Kota Di Jawa Tengah",
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ),
                     ),
-                    Flexible(
-                      fit: FlexFit.tight,
-                      flex: 1,
-                      child: Container(
-                        height: 100,
-                        color: Colors.transparent,
+                  ),
+                  Flexible(
+                    fit: FlexFit.tight,
+                    flex: 1,
+                    child: Container(height: 100, color: Colors.transparent),
+                  ),
+                ],
+              ),
+            ),
+            Flexible(
+              flex: 1,
+              fit: FlexFit.tight,
+              child: ElevatedButton(
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(39, 101, 182, 0.882),
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    CustomPageRoute(
+                      child: const pendidikanCilacap(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
+                },
+                child: SizedBox(
+                  width: screenWidth,
+                  height: screenHeight * 0.1,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 10,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Beberapa Indikator Pendidikan di Kabupaten Cilacap",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 13, color: Colors.white),
+                        ),
                       ),
-                    )
-                  ],
-                )),
+                      const Flexible(
+                        flex: 1,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
               child: ElevatedButton(
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(39, 101, 182, 0.882))),
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(236, 138, 20, 0.882),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const pendidikanCilacap(),
-                          direction: AxisDirection.left));
+                    context,
+                    CustomPageRoute(
+                      child: const pendidikanKabkota(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
                 },
                 child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.1,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 10,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Beberapa Indikator Pendidikan di Kabupaten Cilacap",
-                            textAlign: TextAlign.center,
-                          ),
+                  width: screenWidth,
+                  height: screenHeight * 0.1,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 10,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Beberapa Indikator Pendidikan Kabupaten/Kota Di Jawa Tengah",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 13, color: Colors.white),
                         ),
-                        const Flexible(
-                          flex: 1,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
+                      ),
+                      const Flexible(
+                        flex: 1,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
+            const Divider(height: 50, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
-              child: ElevatedButton(
-                style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(236, 138, 20, 0.882))),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const pendidikanKabkota(),
-                          direction: AxisDirection.left));
-                },
-                child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.1,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 10,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Beberapa Indikator Pendidikan Kabupaten/Kota Di Jawa Tengah",
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        const Flexible(
-                          flex: 1,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
-              ),
-            ),
-            const Divider(
-              height: 50,
-              color: Colors.transparent,
-            ),
-            Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Container(
-                color: Colors.transparent,
-              ),
+              child: Container(color: Colors.transparent),
             ),
           ],
         ),
@@ -474,19 +501,25 @@ class CustomPageRoute extends PageRouteBuilder {
   final AxisDirection direction;
 
   CustomPageRoute({required this.child, this.direction = AxisDirection.left})
-      : super(
-            transitionDuration: const Duration(milliseconds: 200),
-            reverseTransitionDuration: const Duration(milliseconds: 200),
-            pageBuilder: (context, animation, secondaryAnimation) => child);
+    : super(
+        transitionDuration: const Duration(milliseconds: 200),
+        reverseTransitionDuration: const Duration(milliseconds: 200),
+        pageBuilder: (context, animation, secondaryAnimation) => child,
+      );
 
   @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-          Animation<double> secondaryAnimation, Widget child) =>
-      SlideTransition(
-        position: Tween<Offset>(begin: getBeginOffset(), end: Offset.zero)
-            .animate(animation),
-        child: child,
-      );
+  Widget buildTransitions(
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) => SlideTransition(
+    position: Tween<Offset>(
+      begin: getBeginOffset(),
+      end: Offset.zero,
+    ).animate(animation),
+    child: child,
+  );
   Offset getBeginOffset() {
     switch (direction) {
       case AxisDirection.up:

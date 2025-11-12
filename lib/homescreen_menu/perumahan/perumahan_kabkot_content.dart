@@ -22,7 +22,8 @@ RepositoryLantai repositorylantai = RepositoryLantai();
 class _perumahankabkotContentState extends State<perumahankabkotContent> {
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height -
+    final screenHeight =
+        MediaQuery.of(context).size.height -
         MediaQuery.of(context).padding.top -
         MediaQuery.of(context).padding.bottom;
     final screenWidth = MediaQuery.of(context).size.width;
@@ -30,28 +31,25 @@ class _perumahankabkotContentState extends State<perumahankabkotContent> {
       appBar: AppBar(
         title: const Text(
           'INDIKATOR PERUMAHAN',
-          style: TextStyle(fontSize: 16),
+          style: TextStyle(fontSize: 16, color: Colors.white),
         ),
         backgroundColor: Colors.black,
+        iconTheme: const IconThemeData(color: Colors.white),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: const Center(
-            child: Icon(
-              BackIcons.circle_arrow,
-              size: 40,
-            ),
-          ),
+          icon: const Center(child: Icon(BackIcons.circle_arrow, size: 40)),
         ),
         actions: [
           IconButton(
-              onPressed: () {
-                showModalBottomSheet(
-                  backgroundColor: Colors.white,
-                  context: context,
-                  builder: (context) {
-                    return ListView(children: [
+            onPressed: () {
+              showModalBottomSheet(
+                backgroundColor: Colors.white,
+                context: context,
+                builder: (context) {
+                  return ListView(
+                    children: [
                       Column(
                         children: [
                           Container(
@@ -77,11 +75,13 @@ class _perumahankabkotContentState extends State<perumahankabkotContent> {
                           ),
                         ],
                       ),
-                    ]);
-                  },
-                );
-              },
-              icon: const Icon(Icons.info_outlined))
+                    ],
+                  );
+                },
+              );
+            },
+            icon: const Icon(Icons.info_outlined),
+          ),
         ],
       ),
       body: Container(
@@ -89,288 +89,295 @@ class _perumahankabkotContentState extends State<perumahankabkotContent> {
         child: Column(
           children: [
             Flexible(
-                flex: 1,
-                fit: FlexFit.tight,
-                child: Column(
-                  children: [
-                    Flexible(
-                      flex: 3,
-                      fit: FlexFit.tight,
-                      child: Container(
-                        height: 100,
-                        color: Colors.black,
-                        child: const Center(
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 2,
-                              horizontal: 5,
-                            ),
-                            child: Text(
-                              "Indikator Perumahan Kabupaten/Kota di Jateng",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
-                              textAlign: TextAlign.center,
-                            ),
+              flex: 1,
+              fit: FlexFit.tight,
+              child: Column(
+                children: [
+                  Flexible(
+                    flex: 3,
+                    fit: FlexFit.tight,
+                    child: Container(
+                      height: 100,
+                      color: Colors.black,
+                      child: const Center(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 2,
+                            horizontal: 5,
+                          ),
+                          child: Text(
+                            "Indikator Perumahan Kabupaten/Kota di Jateng",
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ),
                     ),
-                    Flexible(
-                      fit: FlexFit.tight,
-                      flex: 1,
-                      child: Container(
-                        height: 100,
-                        color: Colors.transparent,
+                  ),
+                  Flexible(
+                    fit: FlexFit.tight,
+                    flex: 1,
+                    child: Container(height: 100, color: Colors.transparent),
+                  ),
+                ],
+              ),
+            ),
+            Flexible(
+              flex: 1,
+              fit: FlexFit.tight,
+              child: ElevatedButton(
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(10, 100, 31, 0.886),
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    CustomPageRoute(
+                      child: const SeriesRumahlantaiKabkot(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
+                },
+                child: SizedBox(
+                  width: screenWidth,
+                  height: screenHeight * 0.08,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 16,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Persentase Rumah Tangga Menurut Jenis Lantai yang Terluas",
+                          textAlign: TextAlign.center,
+                        ),
                       ),
-                    )
-                  ],
-                )),
+                      const Flexible(
+                        flex: 2,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
               child: ElevatedButton(
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(10, 100, 31, 0.886))),
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(10, 100, 31, 0.886),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const SeriesRumahlantaiKabkot(),
-                          direction: AxisDirection.left));
+                    context,
+                    CustomPageRoute(
+                      child: const SeriesRumahatapKabkot(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
                 },
                 child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.08,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 16,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Persentase Rumah Tangga Menurut Jenis Lantai yang Terluas",
-                            textAlign: TextAlign.center,
-                          ),
+                  width: screenWidth,
+                  height: screenHeight * 0.08,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 16,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Persentase Rumah Tangga Menurut Jenis Atap yang Terluas",
+                          textAlign: TextAlign.center,
                         ),
-                        const Flexible(
-                          flex: 2,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
+                      ),
+                      const Flexible(
+                        flex: 2,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
               child: ElevatedButton(
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(10, 100, 31, 0.886))),
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(10, 100, 31, 0.886),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const SeriesRumahatapKabkot(),
-                          direction: AxisDirection.left));
+                    context,
+                    CustomPageRoute(
+                      child: const SeriesRumahdindingKabkot(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
                 },
                 child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.08,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 16,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Persentase Rumah Tangga Menurut Jenis Atap yang Terluas",
-                            textAlign: TextAlign.center,
-                          ),
+                  width: screenWidth,
+                  height: screenHeight * 0.08,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 16,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Persentase Rumah Tangga Menurut Jenis Dinding yang Terluas",
+                          textAlign: TextAlign.center,
                         ),
-                        const Flexible(
-                          flex: 2,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
+                      ),
+                      const Flexible(
+                        flex: 2,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
               child: ElevatedButton(
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(10, 100, 31, 0.886))),
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(10, 100, 31, 0.886),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const SeriesRumahdindingKabkot(),
-                          direction: AxisDirection.left));
+                    context,
+                    CustomPageRoute(
+                      child: const SeriesRumahpeneranganKabkot(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
                 },
                 child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.08,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 16,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Persentase Rumah Tangga Menurut Jenis Dinding yang Terluas",
-                            textAlign: TextAlign.center,
-                          ),
+                  width: screenWidth,
+                  height: screenHeight * 0.08,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 16,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Persentase Rumah Tangga Menurut Sumber Penerangan Utama",
+                          textAlign: TextAlign.center,
                         ),
-                        const Flexible(
-                          flex: 2,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
+                      ),
+                      const Flexible(
+                        flex: 2,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
               child: ElevatedButton(
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(10, 100, 31, 0.886))),
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(10, 100, 31, 0.886),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const SeriesRumahpeneranganKabkot(),
-                          direction: AxisDirection.left));
+                    context,
+                    CustomPageRoute(
+                      child: const SeriesRumahairminumKabkot(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
                 },
                 child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.08,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 16,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Persentase Rumah Tangga Menurut Sumber Penerangan Utama",
-                            textAlign: TextAlign.center,
-                          ),
+                  width: screenWidth,
+                  height: screenHeight * 0.08,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 16,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Persentase Rumah Tangga Menurut Sumber Air Minum Utama",
+                          textAlign: TextAlign.center,
                         ),
-                        const Flexible(
-                          flex: 2,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
+                      ),
+                      const Flexible(
+                        flex: 2,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
               child: ElevatedButton(
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(10, 100, 31, 0.886))),
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(10, 100, 31, 0.886),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const SeriesRumahairminumKabkot(),
-                          direction: AxisDirection.left));
+                    context,
+                    CustomPageRoute(
+                      child: const SeriesRumahbahanbakarKabkot(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
                 },
                 child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.08,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 16,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Persentase Rumah Tangga Menurut Sumber Air Minum Utama",
-                            textAlign: TextAlign.center,
-                          ),
+                  width: screenWidth,
+                  height: screenHeight * 0.08,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 16,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Persentase Rumah Tangga Menurut Bahan Bakar Utama Untuk Memasak",
+                          textAlign: TextAlign.center,
                         ),
-                        const Flexible(
-                          flex: 2,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
+                      ),
+                      const Flexible(
+                        flex: 2,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
-              child: ElevatedButton(
-                style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(10, 100, 31, 0.886))),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const SeriesRumahbahanbakarKabkot(),
-                          direction: AxisDirection.left));
-                },
-                child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.08,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 16,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Persentase Rumah Tangga Menurut Bahan Bakar Utama Untuk Memasak",
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        const Flexible(
-                          flex: 2,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
-              ),
-            ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
-            Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Container(
-                color: Colors.transparent,
-              ),
+              child: Container(color: Colors.transparent),
             ),
           ],
         ),
@@ -384,19 +391,25 @@ class CustomPageRoute extends PageRouteBuilder {
   final AxisDirection direction;
 
   CustomPageRoute({required this.child, this.direction = AxisDirection.left})
-      : super(
-            transitionDuration: const Duration(milliseconds: 200),
-            reverseTransitionDuration: const Duration(milliseconds: 200),
-            pageBuilder: (context, animation, secondaryAnimation) => child);
+    : super(
+        transitionDuration: const Duration(milliseconds: 200),
+        reverseTransitionDuration: const Duration(milliseconds: 200),
+        pageBuilder: (context, animation, secondaryAnimation) => child,
+      );
 
   @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-          Animation<double> secondaryAnimation, Widget child) =>
-      SlideTransition(
-        position: Tween<Offset>(begin: getBeginOffset(), end: Offset.zero)
-            .animate(animation),
-        child: child,
-      );
+  Widget buildTransitions(
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) => SlideTransition(
+    position: Tween<Offset>(
+      begin: getBeginOffset(),
+      end: Offset.zero,
+    ).animate(animation),
+    child: child,
+  );
   Offset getBeginOffset() {
     switch (direction) {
       case AxisDirection.up:

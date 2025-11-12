@@ -22,7 +22,8 @@ RepositoryLantai repositorylantai = RepositoryLantai();
 class _pertanianContentState extends State<pertanianContent> {
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height -
+    final screenHeight =
+        MediaQuery.of(context).size.height -
         MediaQuery.of(context).padding.top -
         MediaQuery.of(context).padding.bottom;
     final screenWidth = MediaQuery.of(context).size.width;
@@ -30,28 +31,25 @@ class _pertanianContentState extends State<pertanianContent> {
       appBar: AppBar(
         title: const Text(
           'DATA PERTANIAN',
-          style: TextStyle(fontSize: 16),
+          style: TextStyle(fontSize: 16, color: Colors.white),
         ),
         backgroundColor: Colors.black,
+        iconTheme: const IconThemeData(color: Colors.white),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: const Center(
-            child: Icon(
-              BackIcons.circle_arrow,
-              size: 40,
-            ),
-          ),
+          icon: const Center(child: Icon(BackIcons.circle_arrow, size: 40)),
         ),
         actions: [
           IconButton(
-              onPressed: () {
-                showModalBottomSheet(
-                  backgroundColor: Colors.white,
-                  context: context,
-                  builder: (context) {
-                    return ListView(children: [
+            onPressed: () {
+              showModalBottomSheet(
+                backgroundColor: Colors.white,
+                context: context,
+                builder: (context) {
+                  return ListView(
+                    children: [
                       Column(
                         children: [
                           Container(
@@ -77,11 +75,13 @@ class _pertanianContentState extends State<pertanianContent> {
                           ),
                         ],
                       ),
-                    ]);
-                  },
-                );
-              },
-              icon: const Icon(Icons.info_outlined))
+                    ],
+                  );
+                },
+              );
+            },
+            icon: const Icon(Icons.info_outlined),
+          ),
         ],
       ),
       body: Container(
@@ -89,288 +89,301 @@ class _pertanianContentState extends State<pertanianContent> {
         child: Column(
           children: [
             Flexible(
-                flex: 2,
-                fit: FlexFit.tight,
-                child: Column(
-                  children: [
-                    Flexible(
-                      flex: 5,
-                      fit: FlexFit.tight,
-                      child: Container(
-                        //height: screenHeight*0.15,
-                        color: Colors.black,
-                        child: const Center(
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 5,
-                              horizontal: 5,
-                            ),
-                            child: Text(
-                              "Pertanian Tanaman Pangan, Hortikultura, Perkebunan, Peternakan dan Perikanan di Kabupaten Cilacap",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
-                              textAlign: TextAlign.center,
-                            ),
+              flex: 2,
+              fit: FlexFit.tight,
+              child: Column(
+                children: [
+                  Flexible(
+                    flex: 5,
+                    fit: FlexFit.tight,
+                    child: Container(
+                      //height: screenHeight*0.15,
+                      color: Colors.black,
+                      child: const Center(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 5,
+                            horizontal: 5,
+                          ),
+                          child: Text(
+                            "Pertanian Tanaman Pangan, Hortikultura, Perkebunan, Peternakan dan Perikanan di Kabupaten Cilacap",
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ),
                     ),
-                    Flexible(
-                      fit: FlexFit.tight,
-                      flex: 1,
-                      child: Container(
-                        height: 100,
-                        color: Colors.transparent,
+                  ),
+                  Flexible(
+                    fit: FlexFit.tight,
+                    flex: 1,
+                    child: Container(height: 100, color: Colors.transparent),
+                  ),
+                ],
+              ),
+            ),
+            Flexible(
+              flex: 1,
+              fit: FlexFit.tight,
+              child: ElevatedButton(
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(10, 100, 31, 0.886),
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    CustomPageRoute(
+                      child: const SeriesPangan(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
+                },
+                child: SizedBox(
+                  width: screenWidth,
+                  height: screenHeight * 0.09,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 16,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Luas Panen, Produktivitas dan Produksi Tanaman Pangan (Padi dan Palawija) di Kabupaten Cilacap",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
-                    )
-                  ],
-                )),
+                      const Flexible(
+                        flex: 1,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
               child: ElevatedButton(
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(10, 100, 31, 0.886))),
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(10, 100, 31, 0.886),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const SeriesPangan(),
-                          direction: AxisDirection.left));
+                    context,
+                    CustomPageRoute(
+                      child: const SeriesHortiSemusim(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
                 },
                 child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.09,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 16,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Luas Panen, Produktivitas dan Produksi Tanaman Pangan (Padi dan Palawija) di Kabupaten Cilacap",
-                            textAlign: TextAlign.center,
-                          ),
+                  width: screenWidth,
+                  height: screenHeight * 0.08,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 16,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Luas Panen dan Produksi Tanaman Sayuran dan Buah-Buahan Semusim di Kabupaten Cilacap",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white),
                         ),
-                        const Flexible(
-                          flex: 1,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
+                      ),
+                      const Flexible(
+                        flex: 1,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
               child: ElevatedButton(
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(10, 100, 31, 0.886))),
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(10, 100, 31, 0.886),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const SeriesHortiSemusim(),
-                          direction: AxisDirection.left));
+                    context,
+                    CustomPageRoute(
+                      child: const SeriesHortiTahunan(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
                 },
                 child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.08,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 16,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Luas Panen dan Produksi Tanaman Sayuran dan Buah-Buahan Semusim di Kabupaten Cilacap",
-                            textAlign: TextAlign.center,
-                          ),
+                  width: screenWidth,
+                  height: screenHeight * 0.08,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 16,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Produksi Tanaman Sayuran dan Buah-Buahan Tahunan di Kabupaten Cilacap",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white),
                         ),
-                        const Flexible(
-                          flex: 1,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
+                      ),
+                      const Flexible(
+                        flex: 1,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
               child: ElevatedButton(
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(10, 100, 31, 0.886))),
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(10, 100, 31, 0.886),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const SeriesHortiTahunan(),
-                          direction: AxisDirection.left));
+                    context,
+                    CustomPageRoute(
+                      child: const SeriesKebun(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
                 },
                 child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.08,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 16,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Produksi Tanaman Sayuran dan Buah-Buahan Tahunan di Kabupaten Cilacap",
-                            textAlign: TextAlign.center,
-                          ),
+                  width: screenWidth,
+                  height: screenHeight * 0.08,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 16,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Luas Areal Tanaman Perkebunan dan Produksi Tanaman Perkebunan di Kabupaten Cilacap",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white),
                         ),
-                        const Flexible(
-                          flex: 1,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
+                      ),
+                      const Flexible(
+                        flex: 1,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
               child: ElevatedButton(
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(10, 100, 31, 0.886))),
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(10, 100, 31, 0.886),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const SeriesKebun(),
-                          direction: AxisDirection.left));
+                    context,
+                    CustomPageRoute(
+                      child: const SeriesTernak(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
                 },
                 child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.08,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 16,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Luas Areal Tanaman Perkebunan dan Produksi Tanaman Perkebunan di Kabupaten Cilacap",
-                            textAlign: TextAlign.center,
-                          ),
+                  width: screenWidth,
+                  height: screenHeight * 0.08,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 16,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Populasi Ternak Besar, Sedang, Kecil dan Unggas di Kabupaten Cilacap",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white),
                         ),
-                        const Flexible(
-                          flex: 1,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
+                      ),
+                      const Flexible(
+                        flex: 1,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
               child: ElevatedButton(
                 style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(10, 100, 31, 0.886))),
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromRGBO(10, 100, 31, 0.886),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const SeriesTernak(),
-                          direction: AxisDirection.left));
+                    context,
+                    CustomPageRoute(
+                      child: const SeriesIkan(),
+                      direction: AxisDirection.left,
+                    ),
+                  );
                 },
                 child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.08,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 16,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Populasi Ternak Besar, Sedang, Kecil dan Unggas di Kabupaten Cilacap",
-                            textAlign: TextAlign.center,
-                          ),
+                  width: screenWidth,
+                  height: screenHeight * 0.08,
+                  child: Row(
+                    children: [
+                      const Flexible(
+                        flex: 16,
+                        fit: FlexFit.tight,
+                        child: Text(
+                          "Produksi Perikanan Tangkap dan Perikanan Budidaya di Kabupaten Cilacap",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white),
                         ),
-                        const Flexible(
-                          flex: 1,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
+                      ),
+                      const Flexible(
+                        flex: 1,
+                        fit: FlexFit.tight,
+                        child: Icon(Icons.arrow_right),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
+            const Divider(height: 5, color: Colors.transparent),
             Flexible(
               flex: 1,
               fit: FlexFit.tight,
-              child: ElevatedButton(
-                style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll<Color>(
-                        Color.fromRGBO(10, 100, 31, 0.886))),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      CustomPageRoute(
-                          child: const SeriesIkan(),
-                          direction: AxisDirection.left));
-                },
-                child: SizedBox(
-                    width: screenWidth,
-                    height: screenHeight * 0.08,
-                    child: Row(
-                      children: [
-                        const Flexible(
-                          flex: 16,
-                          fit: FlexFit.tight,
-                          child: Text(
-                            "Produksi Perikanan Tangkap dan Perikanan Budidaya di Kabupaten Cilacap",
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        const Flexible(
-                          flex: 1,
-                          fit: FlexFit.tight,
-                          child: Icon(Icons.arrow_right),
-                        ),
-                      ],
-                    )),
-              ),
-            ),
-            const Divider(
-              height: 5,
-              color: Colors.transparent,
-            ),
-            Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Container(
-                color: Colors.transparent,
-              ),
+              child: Container(color: Colors.transparent),
             ),
           ],
         ),
@@ -384,19 +397,25 @@ class CustomPageRoute extends PageRouteBuilder {
   final AxisDirection direction;
 
   CustomPageRoute({required this.child, this.direction = AxisDirection.left})
-      : super(
-            transitionDuration: const Duration(milliseconds: 200),
-            reverseTransitionDuration: const Duration(milliseconds: 200),
-            pageBuilder: (context, animation, secondaryAnimation) => child);
+    : super(
+        transitionDuration: const Duration(milliseconds: 200),
+        reverseTransitionDuration: const Duration(milliseconds: 200),
+        pageBuilder: (context, animation, secondaryAnimation) => child,
+      );
 
   @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-          Animation<double> secondaryAnimation, Widget child) =>
-      SlideTransition(
-        position: Tween<Offset>(begin: getBeginOffset(), end: Offset.zero)
-            .animate(animation),
-        child: child,
-      );
+  Widget buildTransitions(
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) => SlideTransition(
+    position: Tween<Offset>(
+      begin: getBeginOffset(),
+      end: Offset.zero,
+    ).animate(animation),
+    child: child,
+  );
   Offset getBeginOffset() {
     switch (direction) {
       case AxisDirection.up:

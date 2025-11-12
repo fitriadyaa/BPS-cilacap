@@ -18,7 +18,8 @@ RepositoryMinum repositoryminum = RepositoryMinum();
 class _PerumahanMinumState extends State<PerumahanMinum> {
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height -
+    final screenHeight =
+        MediaQuery.of(context).size.height -
         MediaQuery.of(context).padding.top -
         MediaQuery.of(context).padding.bottom;
     // ignore: unused_local_variable
@@ -27,19 +28,15 @@ class _PerumahanMinumState extends State<PerumahanMinum> {
       appBar: AppBar(
         title: const Text(
           'INDIKATOR PERUMAHAN (AIR MINUM)',
-          style: TextStyle(fontSize: 16),
+          style: TextStyle(fontSize: 16, color: Colors.white),
         ),
         backgroundColor: Colors.black,
+        iconTheme: const IconThemeData(color: Colors.white),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: const Center(
-            child: Icon(
-              BackIcons.circle_arrow,
-              size: 40,
-            ),
-          ),
+          icon: const Center(child: Icon(BackIcons.circle_arrow, size: 40)),
         ),
       ),
       body: FutureBuilder(
@@ -66,72 +63,102 @@ class _PerumahanMinumState extends State<PerumahanMinum> {
                 String rincian_10 = isiminum[index = 9].rincian;
 
                 //tahun n-2
-                double persentase_1 =
-                    double.parse(isiminum[index = 0].persentase);
-                double persentase_2 =
-                    double.parse(isiminum[index = 1].persentase);
-                double persentase_3 =
-                    double.parse(isiminum[index = 2].persentase);
-                double persentase_4 =
-                    double.parse(isiminum[index = 3].persentase);
-                double persentase_5 =
-                    double.parse(isiminum[index = 4].persentase);
-                double persentase_6 =
-                    double.parse(isiminum[index = 5].persentase);
-                double persentase_7 =
-                    double.parse(isiminum[index = 6].persentase);
-                double persentase_8 =
-                    double.parse(isiminum[index = 7].persentase);
-                double persentase_9 =
-                    double.parse(isiminum[index = 8].persentase);
-                double persentase_10 =
-                    double.parse(isiminum[index = 9].persentase);
+                double persentase_1 = double.parse(
+                  isiminum[index = 0].persentase,
+                );
+                double persentase_2 = double.parse(
+                  isiminum[index = 1].persentase,
+                );
+                double persentase_3 = double.parse(
+                  isiminum[index = 2].persentase,
+                );
+                double persentase_4 = double.parse(
+                  isiminum[index = 3].persentase,
+                );
+                double persentase_5 = double.parse(
+                  isiminum[index = 4].persentase,
+                );
+                double persentase_6 = double.parse(
+                  isiminum[index = 5].persentase,
+                );
+                double persentase_7 = double.parse(
+                  isiminum[index = 6].persentase,
+                );
+                double persentase_8 = double.parse(
+                  isiminum[index = 7].persentase,
+                );
+                double persentase_9 = double.parse(
+                  isiminum[index = 8].persentase,
+                );
+                double persentase_10 = double.parse(
+                  isiminum[index = 9].persentase,
+                );
 
                 //tahun n-1
 
-                double persentase_11 =
-                    double.parse(isiminum[index = 10].persentase);
-                double persentase_12 =
-                    double.parse(isiminum[index = 11].persentase);
-                double persentase_13 =
-                    double.parse(isiminum[index = 12].persentase);
-                double persentase_14 =
-                    double.parse(isiminum[index = 13].persentase);
-                double persentase_15 =
-                    double.parse(isiminum[index = 14].persentase);
-                double persentase_16 =
-                    double.parse(isiminum[index = 15].persentase);
-                double persentase_17 =
-                    double.parse(isiminum[index = 16].persentase);
-                double persentase_18 =
-                    double.parse(isiminum[index = 17].persentase);
-                double persentase_19 =
-                    double.parse(isiminum[index = 18].persentase);
-                double persentase_20 =
-                    double.parse(isiminum[index = 19].persentase);
+                double persentase_11 = double.parse(
+                  isiminum[index = 10].persentase,
+                );
+                double persentase_12 = double.parse(
+                  isiminum[index = 11].persentase,
+                );
+                double persentase_13 = double.parse(
+                  isiminum[index = 12].persentase,
+                );
+                double persentase_14 = double.parse(
+                  isiminum[index = 13].persentase,
+                );
+                double persentase_15 = double.parse(
+                  isiminum[index = 14].persentase,
+                );
+                double persentase_16 = double.parse(
+                  isiminum[index = 15].persentase,
+                );
+                double persentase_17 = double.parse(
+                  isiminum[index = 16].persentase,
+                );
+                double persentase_18 = double.parse(
+                  isiminum[index = 17].persentase,
+                );
+                double persentase_19 = double.parse(
+                  isiminum[index = 18].persentase,
+                );
+                double persentase_20 = double.parse(
+                  isiminum[index = 19].persentase,
+                );
 
                 //tahun n
 
-                double persentase_21 =
-                    double.parse(isiminum[index = 20].persentase);
-                double persentase_22 =
-                    double.parse(isiminum[index = 21].persentase);
-                double persentase_23 =
-                    double.parse(isiminum[index = 22].persentase);
-                double persentase_24 =
-                    double.parse(isiminum[index = 23].persentase);
-                double persentase_25 =
-                    double.parse(isiminum[index = 24].persentase);
-                double persentase_26 =
-                    double.parse(isiminum[index = 25].persentase);
-                double persentase_27 =
-                    double.parse(isiminum[index = 26].persentase);
-                double persentase_28 =
-                    double.parse(isiminum[index = 27].persentase);
-                double persentase_29 =
-                    double.parse(isiminum[index = 28].persentase);
-                double persentase_30 =
-                    double.parse(isiminum[index = 29].persentase);
+                double persentase_21 = double.parse(
+                  isiminum[index = 20].persentase,
+                );
+                double persentase_22 = double.parse(
+                  isiminum[index = 21].persentase,
+                );
+                double persentase_23 = double.parse(
+                  isiminum[index = 22].persentase,
+                );
+                double persentase_24 = double.parse(
+                  isiminum[index = 23].persentase,
+                );
+                double persentase_25 = double.parse(
+                  isiminum[index = 24].persentase,
+                );
+                double persentase_26 = double.parse(
+                  isiminum[index = 25].persentase,
+                );
+                double persentase_27 = double.parse(
+                  isiminum[index = 26].persentase,
+                );
+                double persentase_28 = double.parse(
+                  isiminum[index = 27].persentase,
+                );
+                double persentase_29 = double.parse(
+                  isiminum[index = 28].persentase,
+                );
+                double persentase_30 = double.parse(
+                  isiminum[index = 29].persentase,
+                );
 
                 // grafik
                 return Container(
@@ -139,13 +166,16 @@ class _PerumahanMinumState extends State<PerumahanMinum> {
                   child: Column(
                     children: [
                       Container(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 10, horizontal: 2),
-                          child: const Text(
-                            "Persentase Rumah Tangga Menurut Sumber Air Minum Utama Yang Digunakan",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          )),
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 10,
+                          horizontal: 2,
+                        ),
+                        child: const Text(
+                          "Persentase Rumah Tangga Menurut Sumber Air Minum Utama Yang Digunakan",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
                       SizedBox(
                         height: screenHeight * 0.90,
                         child: Column(
@@ -157,14 +187,17 @@ class _PerumahanMinumState extends State<PerumahanMinum> {
                                   flex: 4,
                                   child: Container(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 2, vertical: 12),
+                                      horizontal: 2,
+                                      vertical: 12,
+                                    ),
                                     color: Colors.green,
                                     child: const Text(
                                       "Sumber Air Minum",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -173,14 +206,17 @@ class _PerumahanMinumState extends State<PerumahanMinum> {
                                   flex: 2,
                                   child: Container(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 2, vertical: 12),
+                                      horizontal: 2,
+                                      vertical: 12,
+                                    ),
                                     color: Colors.green,
                                     child: Text(
                                       th1,
                                       textAlign: TextAlign.center,
                                       style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -189,14 +225,17 @@ class _PerumahanMinumState extends State<PerumahanMinum> {
                                   flex: 2,
                                   child: Container(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 2, vertical: 12),
+                                      horizontal: 2,
+                                      vertical: 12,
+                                    ),
                                     color: Colors.green,
                                     child: Text(
                                       th2,
                                       textAlign: TextAlign.center,
                                       style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -205,14 +244,17 @@ class _PerumahanMinumState extends State<PerumahanMinum> {
                                   flex: 2,
                                   child: Container(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 2, vertical: 12),
+                                      horizontal: 2,
+                                      vertical: 12,
+                                    ),
                                     color: Colors.green,
                                     child: Text(
                                       th3,
                                       textAlign: TextAlign.center,
                                       style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -220,667 +262,689 @@ class _PerumahanMinumState extends State<PerumahanMinum> {
                             ),
 
                             // Air Kemasan/isi Ulang
-
-                            Row(children: [
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 3,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 2,
-                                    vertical: 2,
-                                  ),
-                                  child: Text(
-                                    rincian_1,
-                                    textAlign: TextAlign.left,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                            Row(
+                              children: [
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 3,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 2,
+                                    ),
+                                    child: Text(
+                                      rincian_1,
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_1, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_1, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_11, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_11, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_21, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_21, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]),
+                              ],
+                            ),
                             const Divider(),
 
                             // Leding
-                            Row(children: [
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 3,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    rincian_2,
-                                    textAlign: TextAlign.left,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                            Row(
+                              children: [
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 3,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      rincian_2,
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_2, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_2, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_12, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_12, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_22, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_22, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]),
+                              ],
+                            ),
                             const Divider(),
 
                             // Sumur Bor/Pompa
-                            Row(children: [
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 3,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    rincian_3,
-                                    textAlign: TextAlign.left,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                            Row(
+                              children: [
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 3,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      rincian_3,
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_3, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_3, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_13, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_13, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_23, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_23, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]),
+                              ],
+                            ),
                             const Divider(),
 
                             // Sumur Terlindung
-                            Row(children: [
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 3,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    rincian_4,
-                                    textAlign: TextAlign.left,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                            Row(
+                              children: [
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 3,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      rincian_4,
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_4, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_4, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_14, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_14, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_24, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_24, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]),
+                              ],
+                            ),
                             const Divider(),
 
                             // Sumur Tak terlindung
-                            Row(children: [
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 3,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    rincian_5,
-                                    textAlign: TextAlign.left,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                            Row(
+                              children: [
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 3,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      rincian_5,
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_5, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_5, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_15, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_15, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_25, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_25, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]),
+                              ],
+                            ),
                             const Divider(),
 
                             //  Mata Air terlindung/tak terlindung
-                            Row(children: [
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 3,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    rincian_6,
-                                    textAlign: TextAlign.left,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                            Row(
+                              children: [
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 3,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      rincian_6,
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_6, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_6, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_16, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_16, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_26, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_26, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]),
+                              ],
+                            ),
                             const Divider(),
 
                             //  Air Permukaan
-                            Row(children: [
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 3,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    rincian_7,
-                                    textAlign: TextAlign.left,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                            Row(
+                              children: [
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 3,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      rincian_7,
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_7, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_7, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_17, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_17, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_27, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_27, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]),
+                              ],
+                            ),
                             const Divider(),
 
                             // Air Hujan
-                            Row(children: [
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 3,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    rincian_8,
-                                    textAlign: TextAlign.left,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                            Row(
+                              children: [
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 3,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      rincian_8,
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_8, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_8, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_18, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_18, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_28, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_28, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]),
+                              ],
+                            ),
                             const Divider(),
 
                             // Lainnya
-                            Row(children: [
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 3,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    rincian_9,
-                                    textAlign: TextAlign.left,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                            Row(
+                              children: [
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 3,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      rincian_9,
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_9, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_9, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_19, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_19, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_29, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_29, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]),
-                            const Divider(
-                              thickness: 2,
+                              ],
                             ),
+                            const Divider(thickness: 2),
 
                             // Total
-                            Row(children: [
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 3,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    rincian_10,
-                                    textAlign: TextAlign.left,
-                                    style: const TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold,
+                            Row(
+                              children: [
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 3,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      rincian_10,
+                                      textAlign: TextAlign.left,
+                                      style: const TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_10, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_10, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_20, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_20, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                fit: FlexFit.tight,
-                                flex: 2,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 1),
-                                  child: Text(
-                                    Format.convertTo(persentase_30, 2),
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold,
+                                Flexible(
+                                  fit: FlexFit.tight,
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 1,
+                                    ),
+                                    child: Text(
+                                      Format.convertTo(persentase_30, 2),
+                                      textAlign: TextAlign.right,
+                                      style: const TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]),
-                            const Divider(
-                              thickness: 2,
+                              ],
                             ),
-                            Row(children: [
-                              Flexible(
+                            const Divider(thickness: 2),
+                            Row(
+                              children: [
+                                Flexible(
                                   flex: 1,
                                   child: Column(
                                     mainAxisAlignment:
@@ -895,13 +959,16 @@ class _PerumahanMinumState extends State<PerumahanMinum> {
                                         child: const Text(
                                           " Sumber Data : Survei Sosial Ekonomi Nasional",
                                           style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.normal),
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.normal,
+                                          ),
                                         ),
                                       ),
                                     ],
-                                  ))
-                            ]),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ),
@@ -915,7 +982,8 @@ class _PerumahanMinumState extends State<PerumahanMinum> {
             return const Text('Database Error');
           } else {
             return const Center(
-                child: CircularProgressIndicator(strokeWidth: 3));
+              child: CircularProgressIndicator(strokeWidth: 3),
+            );
           }
         },
       ),
@@ -923,10 +991,12 @@ class _PerumahanMinumState extends State<PerumahanMinum> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
-              context,
-              CustomPageRoute(
-                  child: const BodyGrafikRumahMinum(),
-                  direction: AxisDirection.left));
+            context,
+            CustomPageRoute(
+              child: const BodyGrafikRumahMinum(),
+              direction: AxisDirection.left,
+            ),
+          );
         },
         mini: true,
         child: const Icon(Icons.pie_chart),
@@ -940,19 +1010,25 @@ class CustomPageRoute extends PageRouteBuilder {
   final AxisDirection direction;
 
   CustomPageRoute({required this.child, this.direction = AxisDirection.left})
-      : super(
-            transitionDuration: const Duration(milliseconds: 200),
-            reverseTransitionDuration: const Duration(milliseconds: 200),
-            pageBuilder: (context, animation, secondaryAnimation) => child);
+    : super(
+        transitionDuration: const Duration(milliseconds: 200),
+        reverseTransitionDuration: const Duration(milliseconds: 200),
+        pageBuilder: (context, animation, secondaryAnimation) => child,
+      );
 
   @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-          Animation<double> secondaryAnimation, Widget child) =>
-      SlideTransition(
-        position: Tween<Offset>(begin: getBeginOffset(), end: Offset.zero)
-            .animate(animation),
-        child: child,
-      );
+  Widget buildTransitions(
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) => SlideTransition(
+    position: Tween<Offset>(
+      begin: getBeginOffset(),
+      end: Offset.zero,
+    ).animate(animation),
+    child: child,
+  );
   Offset getBeginOffset() {
     switch (direction) {
       case AxisDirection.up:

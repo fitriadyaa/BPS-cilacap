@@ -16,7 +16,7 @@ if (keystorePropertiesFile.exists()) {
 android {
     namespace = "com.sicantik_clp.bps_cilacap"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = "29.0.14206865"
+    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
